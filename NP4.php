@@ -20,6 +20,8 @@ if($stdin == 2){
 }else{
 	echo 'file name(default "array.txt"' . "\t";
 	$path = rtrim(fgets(STDIN));
+	if($path == '')
+		$path = 'array.txt';
 	if(!is_file(__DIR__ . DIRECTORY_SEPARATOR . $path)){
 		echo 'this is not a file';
 	}else{	
